@@ -5,12 +5,8 @@ use std::error::Error;
 use std::io::BufReader;
 const BOARD_SIZE: usize = 9;
 
-pub fn print_hello() {
-    println!("Hello, world!");
-}
 
 #[derive(Debug)] //so we can print out Sudoku for debugging with println!({:?}, Sudoku);
-//can also use {:#?}, which is pretty printing of Sudoku
 pub struct Sudoku {
     board: Vec<Vec<i32>>, //board is a vec of vec
     empty_cells: Vec<(usize,usize)>, //hold pair of row,col; so need usize as type
